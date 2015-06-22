@@ -1,0 +1,1769 @@
+<?xml version="1.0"?>
+<block type="rhock_if" id="1418" inline="true" collapsed="true" x="-42" y="-432">
+  <value name="VAL">
+    <block type="rhock_bool" id="1419">
+      <field name="BOOL">true</field>
+    </block>
+  </value>
+  <statement name="DO">
+    <block type="rhock_repeat" id="1420" inline="true">
+      <value name="TIMES">
+        <block type="rhock_number" id="1421">
+          <field name="NUM">5</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="rhock_sleep" id="1422" inline="true">
+          <value name="VAL">
+            <block type="rhock_number" id="1423">
+              <field name="NUM">100</field>
+            </block>
+          </value>
+          <next>
+            <block type="metabot_leds" id="1424">
+              <field name="COL">#ff0000</field>
+              <next>
+                <block type="rhock_sleep" id="1425" inline="true">
+                  <value name="VAL">
+                    <block type="rhock_number" id="1426">
+                      <field name="NUM">100</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="metabot_leds" id="1427">
+                      <field name="COL">#ffffff</field>
+                      <next>
+                        <block type="rhock_sleep" id="1428" inline="true">
+                          <value name="VAL">
+                            <block type="rhock_number" id="1429">
+                              <field name="NUM">100</field>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <next>
+        <block type="metabot_leds" id="1430">
+          <field name="COL">#0000ff</field>
+          <next>
+            <block type="rhock_sleep" id="1431" inline="true">
+              <value name="VAL">
+                <block type="rhock_number" id="1432">
+                  <field name="NUM">1000</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </statement>
+  <next>
+    <block type="rhock_if" id="2320" inline="true" collapsed="true">
+      <value name="VAL">
+        <block type="rhock_bool" id="2327">
+          <field name="BOOL">true</field>
+        </block>
+      </value>
+      <statement name="DO">
+        <block type="rhock_repeat" id="1433" inline="true" collapsed="true">
+          <comment pinned="false" h="80" w="160">Taper le sol en rythme</comment>
+          <value name="TIMES">
+            <block type="rhock_number" id="1434">
+              <field name="NUM">4</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="metabot_h" id="1435" inline="true">
+              <value name="H">
+                <block type="rhock_number" id="1436">
+                  <field name="NUM">20</field>
+                </block>
+              </value>
+              <next>
+                <block type="rhock_repeat" id="1437" inline="true">
+                  <value name="TIMES">
+                    <block type="rhock_number" id="1438">
+                      <field name="NUM">3</field>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="metabot_leds" id="1439">
+                      <field name="COL">#ffffff</field>
+                      <next>
+                        <block type="rhock_sleep" id="1440" inline="true">
+                          <value name="VAL">
+                            <block type="rhock_number" id="1441">
+                              <field name="NUM">100</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="metabot_leds" id="1442">
+                              <field name="COL">#ff0000</field>
+                              <next>
+                                <block type="rhock_sleep" id="1443" inline="true">
+                                  <value name="VAL">
+                                    <block type="rhock_number" id="1444">
+                                      <field name="NUM">200</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="rhock_sleep" id="1445" inline="true">
+                      <value name="VAL">
+                        <block type="rhock_number" id="1446">
+                          <field name="NUM">400</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="metabot_reset" id="1447">
+                          <next>
+                            <block type="rhock_repeat" id="1448" inline="true">
+                              <value name="TIMES">
+                                <block type="rhock_number" id="1449">
+                                  <field name="NUM">3</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="metabot_leds" id="1450">
+                                  <field name="COL">#ffffff</field>
+                                  <next>
+                                    <block type="rhock_sleep" id="1451" inline="true">
+                                      <value name="VAL">
+                                        <block type="rhock_number" id="1452">
+                                          <field name="NUM">100</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="metabot_leds" id="1453">
+                                          <field name="COL">#ff0000</field>
+                                          <next>
+                                            <block type="rhock_sleep" id="1454" inline="true">
+                                              <value name="VAL">
+                                                <block type="rhock_number" id="1455">
+                                                  <field name="NUM">200</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="rhock_sleep" id="1456" inline="true">
+                                  <value name="VAL">
+                                    <block type="rhock_number" id="1457">
+                                      <field name="NUM">500</field>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="rhock_repeat" id="1458" inline="true" collapsed="true">
+              <value name="TIMES">
+                <block type="rhock_number" id="1459">
+                  <field name="NUM">6</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="metabot_leds" id="1460">
+                  <field name="COL">#0000ff</field>
+                  <next>
+                    <block type="metabot_h" id="1461" inline="true">
+                      <value name="H">
+                        <block type="rhock_number" id="1462">
+                          <field name="NUM">60</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="rhock_sleep" id="1463" inline="true">
+                          <value name="VAL">
+                            <block type="rhock_number" id="1464">
+                              <field name="NUM">700</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="metabot_leds" id="1465">
+                              <field name="COL">#00ff00</field>
+                              <next>
+                                <block type="metabot_h" id="1466" inline="true">
+                                  <value name="H">
+                                    <block type="rhock_number" id="1467">
+                                      <field name="NUM">-30</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="rhock_sleep" id="1468" inline="true">
+                                      <value name="VAL">
+                                        <block type="rhock_number" id="1469">
+                                          <field name="NUM">700</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="metabot_reset" id="1470"/>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <next>
+                <block type="rhock_repeat" id="1471" inline="true" collapsed="true">
+                  <value name="TIMES">
+                    <block type="rhock_number" id="1472">
+                      <field name="NUM">3</field>
+                    </block>
+                  </value>
+                  <statement name="DO">
+                    <block type="metabot_leds" id="1473">
+                      <field name="COL">#ffff00</field>
+                      <next>
+                        <block type="rhock_sleep" id="1474" inline="true">
+                          <value name="VAL">
+                            <block type="rhock_number" id="1475">
+                              <field name="NUM">100</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="metabot_leds" id="1476">
+                              <field name="COL">#0000ff</field>
+                              <next>
+                                <block type="rhock_sleep" id="1477" inline="true">
+                                  <value name="VAL">
+                                    <block type="rhock_number" id="1478">
+                                      <field name="NUM">100</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="metabot_leds" id="1479">
+                                      <field name="COL">#00ff00</field>
+                                      <next>
+                                        <block type="rhock_sleep" id="1480" inline="true">
+                                          <value name="VAL">
+                                            <block type="rhock_number" id="1481">
+                                              <field name="NUM">100</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="metabot_leds" id="1482">
+                                              <field name="COL">#ff00ff</field>
+                                              <next>
+                                                <block type="rhock_sleep" id="1483" inline="true">
+                                                  <value name="VAL">
+                                                    <block type="rhock_number" id="1484">
+                                                      <field name="NUM">100</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="metabot_leds" id="1485">
+                                                      <field name="COL">#ff0000</field>
+                                                      <next>
+                                                        <block type="rhock_sleep" id="1486" inline="true">
+                                                          <value name="VAL">
+                                                            <block type="rhock_number" id="1487">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="metabot_leds" id="1488">
+                                                            <field name="COL">#ffff00</field>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="rhock_sleep" id="1489" inline="true" collapsed="true">
+                      <value name="VAL">
+                        <block type="rhock_number" id="1490">
+                          <field name="NUM">1300</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="rhock_repeat" id="1491" inline="true" collapsed="true">
+                          <value name="TIMES">
+                            <block type="rhock_number" id="1492">
+                              <field name="NUM">3</field>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="metabot_leds" id="1493">
+                              <field name="COL">#ff00ff</field>
+                              <next>
+                                <block type="metabot_leg_leds" id="1494" inline="true">
+                                  <field name="COL">#ffffff</field>
+                                  <value name="LEG">
+                                    <block type="rhock_number" id="1495">
+                                      <field name="NUM">2</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="metabot_leg_leds" id="1496" inline="true">
+                                      <field name="COL">#ffffff</field>
+                                      <value name="LEG">
+                                        <block type="rhock_number" id="1497">
+                                          <field name="NUM">4</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="metabot_h" id="1498" inline="true">
+                                          <value name="H">
+                                            <block type="rhock_number" id="1499">
+                                              <field name="NUM">60</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="rhock_sleep" id="1500" inline="true">
+                                              <value name="VAL">
+                                                <block type="rhock_number" id="1501">
+                                                  <field name="NUM">650</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="metabot_h" id="1502" inline="true">
+                                                  <value name="H">
+                                                    <block type="rhock_number" id="1503">
+                                                      <field name="NUM">-30</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="metabot_leds" id="1504">
+                                                      <field name="COL">#ffffff</field>
+                                                      <next>
+                                                        <block type="metabot_leg_leds" id="1505" inline="true">
+                                                          <field name="COL">#ff00ff</field>
+                                                          <value name="LEG">
+                                                            <block type="rhock_number" id="1506">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="metabot_leg_leds" id="1507" inline="true">
+                                                            <field name="COL">#ff00ff</field>
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1508">
+                                                            <field name="NUM">4</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1509" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1510">
+                                                            <field name="NUM">800</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_reset" id="1511"/>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="rhock_repeat" id="1512" inline="true" collapsed="true">
+                              <value name="TIMES">
+                                <block type="rhock_number" id="1513">
+                                  <field name="NUM">3</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="metabot_leds" id="1514">
+                                  <field name="COL">#ffff00</field>
+                                  <next>
+                                    <block type="rhock_sleep" id="1515" inline="true">
+                                      <value name="VAL">
+                                        <block type="rhock_number" id="1516">
+                                          <field name="NUM">100</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="metabot_leds" id="1517">
+                                          <field name="COL">#0000ff</field>
+                                          <next>
+                                            <block type="rhock_sleep" id="1518" inline="true">
+                                              <value name="VAL">
+                                                <block type="rhock_number" id="1519">
+                                                  <field name="NUM">100</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="metabot_leds" id="1520">
+                                                  <field name="COL">#00ff00</field>
+                                                  <next>
+                                                    <block type="rhock_sleep" id="1521" inline="true">
+                                                      <value name="VAL">
+                                                        <block type="rhock_number" id="1522">
+                                                          <field name="NUM">100</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="metabot_leds" id="1523">
+                                                          <field name="COL">#ff00ff</field>
+                                                          <next>
+                                                            <block type="rhock_sleep" id="1524" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1525">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1526">
+                                                            <field name="COL">#ff0000</field>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="rhock_repeat" id="1527" inline="true" collapsed="true">
+                                  <value name="TIMES">
+                                    <block type="rhock_number" id="1528">
+                                      <field name="NUM">3</field>
+                                    </block>
+                                  </value>
+                                  <statement name="DO">
+                                    <block type="metabot_leds" id="1529">
+                                      <field name="COL">#0000ff</field>
+                                      <next>
+                                        <block type="metabot_h" id="1530" inline="true">
+                                          <value name="H">
+                                            <block type="rhock_number" id="1531">
+                                              <field name="NUM">60</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="rhock_sleep" id="1532" inline="true">
+                                              <value name="VAL">
+                                                <block type="rhock_number" id="1533">
+                                                  <field name="NUM">700</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="metabot_leds" id="1534">
+                                                  <field name="COL">#00ff00</field>
+                                                  <next>
+                                                    <block type="metabot_h" id="1535" inline="true">
+                                                      <value name="H">
+                                                        <block type="rhock_number" id="1536">
+                                                          <field name="NUM">-30</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="rhock_sleep" id="1537" inline="true">
+                                                          <value name="VAL">
+                                                            <block type="rhock_number" id="1538">
+                                                            <field name="NUM">800</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="metabot_reset" id="1539"/>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </statement>
+                                  <next>
+                                    <block type="rhock_repeat" id="1540" inline="true" collapsed="true">
+                                      <value name="TIMES">
+                                        <block type="rhock_number" id="1541">
+                                          <field name="NUM">3</field>
+                                        </block>
+                                      </value>
+                                      <statement name="DO">
+                                        <block type="metabot_leds" id="1542">
+                                          <field name="COL">#ffff00</field>
+                                          <next>
+                                            <block type="rhock_sleep" id="1543" inline="true">
+                                              <value name="VAL">
+                                                <block type="rhock_number" id="1544">
+                                                  <field name="NUM">100</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="metabot_leds" id="1545">
+                                                  <field name="COL">#0000ff</field>
+                                                  <next>
+                                                    <block type="rhock_sleep" id="1546" inline="true">
+                                                      <value name="VAL">
+                                                        <block type="rhock_number" id="1547">
+                                                          <field name="NUM">100</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="metabot_leds" id="1548">
+                                                          <field name="COL">#00ff00</field>
+                                                          <next>
+                                                            <block type="rhock_sleep" id="1549" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1550">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="rhock_sleep" id="1551" inline="true" collapsed="true">
+                                          <value name="VAL">
+                                            <block type="rhock_number" id="1552">
+                                              <field name="NUM">300</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="rhock_repeat" id="1553" inline="true" collapsed="true">
+                                              <value name="TIMES">
+                                                <block type="rhock_number" id="1554">
+                                                  <field name="NUM">1</field>
+                                                </block>
+                                              </value>
+                                              <statement name="DO">
+                                                <block type="metabot_leg_leds" id="1555" inline="true">
+                                                  <field name="COL">#ffffff</field>
+                                                  <value name="LEG">
+                                                    <block type="rhock_number" id="1556">
+                                                      <field name="NUM">1</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="metabot_ez" id="1557" inline="true">
+                                                      <value name="LEG">
+                                                        <block type="rhock_number" id="1558">
+                                                          <field name="NUM">50</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="Z">
+                                                        <block type="rhock_number" id="1559">
+                                                          <field name="NUM">1</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="rhock_sleep" id="1560" inline="true">
+                                                          <value name="VAL">
+                                                            <block type="rhock_number" id="1561">
+                                                            <field name="NUM">1100</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="metabot_reset" id="1562">
+                                                            <next>
+                                                            <block type="metabot_leg_leds" id="1563" inline="true">
+                                                            <field name="COL">#00ff00</field>
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1564">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1565" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1566">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </statement>
+                                              <next>
+                                                <block type="rhock_sleep" id="1567" inline="true" collapsed="true">
+                                                  <value name="VAL">
+                                                    <block type="rhock_number" id="1568">
+                                                      <field name="NUM">300</field>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="rhock_repeat" id="1569" inline="true" collapsed="true">
+                                                      <value name="TIMES">
+                                                        <block type="rhock_number" id="1570">
+                                                          <field name="NUM">3</field>
+                                                        </block>
+                                                      </value>
+                                                      <statement name="DO">
+                                                        <block type="metabot_leg_leds" id="1571" inline="true">
+                                                          <field name="COL">#ffffff</field>
+                                                          <value name="LEG">
+                                                            <block type="rhock_number" id="1572">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="metabot_ez" id="1573" inline="true">
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1574">
+                                                            <field name="NUM">50</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="Z">
+                                                            <block type="rhock_number" id="1575">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1576" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1577">
+                                                            <field name="NUM">900</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_reset" id="1578">
+                                                            <next>
+                                                            <block type="metabot_leg_leds" id="1579" inline="true">
+                                                            <field name="COL">#00ff00</field>
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1580">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1581" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1582">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </statement>
+                                                      <next>
+                                                        <block type="rhock_sleep" id="1583" inline="true" collapsed="true">
+                                                          <value name="VAL">
+                                                            <block type="rhock_number" id="1584">
+                                                            <field name="NUM">300</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="rhock_repeat" id="1585" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1586">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_leds" id="1587">
+                                                            <field name="COL">#ffff00</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1588" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1589">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1590">
+                                                            <field name="COL">#0000ff</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1591" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1592">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1593">
+                                                            <field name="COL">#00ff00</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1594" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1595">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1596">
+                                                            <field name="COL">#ff00ff</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1597" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1598">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1599">
+                                                            <field name="COL">#ff0000</field>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1600" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1601">
+                                                            <field name="NUM">300</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1602" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1603">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_leg_leds" id="1604" inline="true">
+                                                            <field name="COL">#ffffff</field>
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1605">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_ez" id="1606" inline="true">
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1607">
+                                                            <field name="NUM">50</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="Z">
+                                                            <block type="rhock_number" id="1608">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1609" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1610">
+                                                            <field name="NUM">1100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_reset" id="1611">
+                                                            <next>
+                                                            <block type="metabot_leg_leds" id="1612" inline="true">
+                                                            <field name="COL">#ff0000</field>
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1613">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1614" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1615">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1616" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1617">
+                                                            <field name="NUM">300</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1618" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1619">
+                                                            <field name="NUM">3</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_leg_leds" id="1620" inline="true">
+                                                            <field name="COL">#ffffff</field>
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1621">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_ez" id="1622" inline="true">
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1623">
+                                                            <field name="NUM">50</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="Z">
+                                                            <block type="rhock_number" id="1624">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1625" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1626">
+                                                            <field name="NUM">900</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_reset" id="1627">
+                                                            <next>
+                                                            <block type="metabot_leg_leds" id="1628" inline="true">
+                                                            <field name="COL">#ff0000</field>
+                                                            <value name="LEG">
+                                                            <block type="rhock_number" id="1629">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1630" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1631">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1732" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1733">
+                                                            <field name="NUM">300</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1632" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1633">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_leds" id="1634">
+                                                            <field name="COL">#ffff00</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1635" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1636">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1637">
+                                                            <field name="COL">#0000ff</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1638" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1639">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1640">
+                                                            <field name="COL">#ff0000</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1641" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1642">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1643">
+                                                            <field name="COL">#ff00ff</field>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1644" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1645">
+                                                            <field name="NUM">300</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1646" collapsed="true">
+                                                            <field name="COL">#00ff00</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1647" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1648">
+                                                            <field name="NUM">1500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1649" collapsed="true">
+                                                            <field name="COL">#ffffff</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1650" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1651">
+                                                            <field name="NUM">1500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1652" collapsed="true">
+                                                            <field name="COL">#0000ff</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1653" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1654">
+                                                            <field name="NUM">1500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1655" collapsed="true">
+                                                            <field name="COL">#ff0000</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1656" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1657">
+                                                            <field name="NUM">500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1658" collapsed="true">
+                                                            <field name="COL">#00ffff</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1659" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1660">
+                                                            <field name="NUM">1700</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1661" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1662">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_turn" id="1663" inline="true">
+                                                            <field name="DIR">RIGHT</field>
+                                                            <value name="DEG">
+                                                            <block type="rhock_number" id="1664">
+                                                            <field name="NUM">90</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1665">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1666" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1667">
+                                                            <field name="NUM">300</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1668" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1669">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_turn" id="1670" inline="true">
+                                                            <field name="DIR">LEFT</field>
+                                                            <value name="DEG">
+                                                            <block type="rhock_number" id="1671">
+                                                            <field name="NUM">90</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1672">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1673" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1674">
+                                                            <field name="NUM">1000</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1675" collapsed="true">
+                                                            <field name="COL">#ff0000</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1676" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1677">
+                                                            <field name="NUM">500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1678" collapsed="true">
+                                                            <field name="COL">#ffffff</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1679" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1680">
+                                                            <field name="NUM">700</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1681" collapsed="true">
+                                                            <field name="COL">#0000ff</field>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1682" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1683">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_turn" id="1684" inline="true">
+                                                            <field name="DIR">RIGHT</field>
+                                                            <value name="DEG">
+                                                            <block type="rhock_number" id="1685">
+                                                            <field name="NUM">90</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1686">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1687" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1688">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_turn" id="1689" inline="true">
+                                                            <field name="DIR">LEFT</field>
+                                                            <value name="DEG">
+                                                            <block type="rhock_number" id="1690">
+                                                            <field name="NUM">90</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1691">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1692" inline="true" collapsed="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1693">
+                                                            <field name="NUM">1000</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1694" inline="true" collapsed="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1695">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_move" id="1696" inline="true">
+                                                            <field name="DIR">FORWARD</field>
+                                                            <value name="DIST">
+                                                            <block type="rhock_number" id="1697">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1698">
+                                                            <field name="NUM">200</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_move" id="1699" inline="true">
+                                                            <field name="DIR">BACKWARD</field>
+                                                            <value name="DIST">
+                                                            <block type="rhock_number" id="1700">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1701">
+                                                            <field name="NUM">200</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1702" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1703">
+                                                            <field name="NUM">500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_move" id="1704" inline="true">
+                                                            <field name="DIR">RIGHT</field>
+                                                            <value name="DIST">
+                                                            <block type="rhock_number" id="1705">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1706">
+                                                            <field name="NUM">200</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_move" id="1707" inline="true">
+                                                            <field name="DIR">LEFT</field>
+                                                            <value name="DIST">
+                                                            <block type="rhock_number" id="1708">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1709">
+                                                            <field name="NUM">200</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1710" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1711">
+                                                            <field name="NUM">500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_move" id="1712" inline="true">
+                                                            <field name="DIR">FORWARD</field>
+                                                            <value name="DIST">
+                                                            <block type="rhock_number" id="1713">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1714">
+                                                            <field name="NUM">200</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_move" id="1715" inline="true">
+                                                            <field name="DIR">BACKWARD</field>
+                                                            <value name="DIST">
+                                                            <block type="rhock_number" id="1716">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <value name="SPEED">
+                                                            <block type="rhock_number" id="1717">
+                                                            <field name="NUM">200</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_repeat" id="1718" inline="true">
+                                                            <value name="TIMES">
+                                                            <block type="rhock_number" id="1719">
+                                                            <field name="NUM">2</field>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="metabot_leds" id="1720">
+                                                            <field name="COL">#0000ff</field>
+                                                            <next>
+                                                            <block type="metabot_h" id="1721" inline="true">
+                                                            <value name="H">
+                                                            <block type="rhock_number" id="1722">
+                                                            <field name="NUM">60</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1723" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1724">
+                                                            <field name="NUM">500</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="1725">
+                                                            <field name="COL">#00ff00</field>
+                                                            <next>
+                                                            <block type="metabot_h" id="1726" inline="true">
+                                                            <value name="H">
+                                                            <block type="rhock_number" id="1727">
+                                                            <field name="NUM">-30</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="1728" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="1729">
+                                                            <field name="NUM">400</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_reset" id="1730"/>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+      <next>
+        <block type="metabot_h" id="2274" inline="true" collapsed="true">
+          <value name="H">
+            <block type="rhock_number" id="2275">
+              <field name="NUM">-30</field>
+            </block>
+          </value>
+          <next>
+            <block type="rhock_var_set" id="2163" inline="true" collapsed="true">
+              <field name="VAR">item</field>
+              <value name="VAL">
+                <block type="rhock_number" id="2173">
+                  <field name="NUM">1</field>
+                </block>
+              </value>
+              <next>
+                <block type="rhock_sleep" id="2312" inline="true">
+                  <value name="VAL">
+                    <block type="rhock_number" id="2313">
+                      <field name="NUM">2700</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="rhock_for" id="2127" inline="true">
+                      <field name="VAR">i</field>
+                      <value name="FROM">
+                        <block type="rhock_number" id="2128">
+                          <field name="NUM">1</field>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="rhock_number" id="2129">
+                          <field name="NUM">4</field>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="metabot_ez" id="2106" inline="true">
+                          <value name="LEG">
+                            <block type="rhock_number" id="2107">
+                              <field name="NUM">100</field>
+                            </block>
+                          </value>
+                          <value name="Z">
+                            <block type="rhock_var_get" id="2234">
+                              <field name="VAR">item</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="rhock_repeat" id="2075" inline="true">
+                              <value name="TIMES">
+                                <block type="rhock_number" id="2076">
+                                  <field name="NUM">3</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="metabot_leds" id="2077">
+                                  <field name="COL">#ffffff</field>
+                                  <next>
+                                    <block type="rhock_sleep" id="2078" inline="true">
+                                      <value name="VAL">
+                                        <block type="rhock_number" id="2079">
+                                          <field name="NUM">100</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="metabot_leds" id="2080">
+                                          <field name="COL">#ff0000</field>
+                                          <next>
+                                            <block type="rhock_sleep" id="2081" inline="true">
+                                              <value name="VAL">
+                                                <block type="rhock_number" id="2082">
+                                                  <field name="NUM">200</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="metabot_ez" id="2109" inline="true">
+                                  <value name="LEG">
+                                    <block type="rhock_number" id="2110">
+                                      <field name="NUM">-10</field>
+                                    </block>
+                                  </value>
+                                  <value name="Z">
+                                    <block type="rhock_var_get" id="2235">
+                                      <field name="VAR">item</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="rhock_sleep" id="2083" inline="true">
+                                      <value name="VAL">
+                                        <block type="rhock_number" id="2084">
+                                          <field name="NUM">400</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="rhock_var_inc" id="2310" inline="true">
+                                          <field name="VAR">item</field>
+                                          <value name="VAL">
+                                            <block type="rhock_number" id="2311">
+                                              <field name="NUM">1</field>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="metabot_ez" id="2112" inline="true">
+                                              <value name="LEG">
+                                                <block type="rhock_number" id="2113">
+                                                  <field name="NUM">100</field>
+                                                </block>
+                                              </value>
+                                              <value name="Z">
+                                                <block type="rhock_var_get" id="2250">
+                                                  <field name="VAR">item</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="rhock_repeat" id="2086" inline="true">
+                                                  <value name="TIMES">
+                                                    <block type="rhock_number" id="2087">
+                                                      <field name="NUM">3</field>
+                                                    </block>
+                                                  </value>
+                                                  <statement name="DO">
+                                                    <block type="metabot_leds" id="2088">
+                                                      <field name="COL">#ffffff</field>
+                                                      <next>
+                                                        <block type="rhock_sleep" id="2089" inline="true">
+                                                          <value name="VAL">
+                                                            <block type="rhock_number" id="2090">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="metabot_leds" id="2091">
+                                                            <field name="COL">#ff0000</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="2092" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="2093">
+                                                            <field name="NUM">200</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </statement>
+                                                  <next>
+                                                    <block type="metabot_ez" id="2115" inline="true">
+                                                      <value name="LEG">
+                                                        <block type="rhock_number" id="2116">
+                                                          <field name="NUM">-10</field>
+                                                        </block>
+                                                      </value>
+                                                      <value name="Z">
+                                                        <block type="rhock_var_get" id="2237">
+                                                          <field name="VAR">item</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="rhock_var_inc" id="2259" inline="true">
+                                                          <field name="VAR">item</field>
+                                                          <value name="VAL">
+                                                            <block type="rhock_number" id="2260">
+                                                            <field name="NUM">1</field>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="rhock_sleep" id="2094" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="2095">
+                                                            <field name="NUM">500</field>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="metabot_reset" id="2286" collapsed="true">
+                          <next>
+                            <block type="rhock_repeat" id="2292" inline="true" collapsed="true">
+                              <value name="TIMES">
+                                <block type="rhock_number" id="2293">
+                                  <field name="NUM">3</field>
+                                </block>
+                              </value>
+                              <statement name="DO">
+                                <block type="metabot_leds" id="2294">
+                                  <field name="COL">#ffff00</field>
+                                  <next>
+                                    <block type="rhock_sleep" id="2295" inline="true">
+                                      <value name="VAL">
+                                        <block type="rhock_number" id="2296">
+                                          <field name="NUM">100</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="metabot_leds" id="2297">
+                                          <field name="COL">#0000ff</field>
+                                          <next>
+                                            <block type="rhock_sleep" id="2298" inline="true">
+                                              <value name="VAL">
+                                                <block type="rhock_number" id="2299">
+                                                  <field name="NUM">100</field>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="metabot_leds" id="2300">
+                                                  <field name="COL">#00ff00</field>
+                                                  <next>
+                                                    <block type="rhock_sleep" id="2301" inline="true">
+                                                      <value name="VAL">
+                                                        <block type="rhock_number" id="2302">
+                                                          <field name="NUM">100</field>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="metabot_leds" id="2303">
+                                                          <field name="COL">#ff00ff</field>
+                                                          <next>
+                                                            <block type="rhock_sleep" id="2304" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="2305">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="2306">
+                                                            <field name="COL">#ff0000</field>
+                                                            <next>
+                                                            <block type="rhock_sleep" id="2307" inline="true">
+                                                            <value name="VAL">
+                                                            <block type="rhock_number" id="2308">
+                                                            <field name="NUM">100</field>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="metabot_leds" id="2309">
+                                                            <field name="COL">#ffff00</field>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </next>
+</block>
