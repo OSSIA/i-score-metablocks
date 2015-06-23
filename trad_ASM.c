@@ -3,19 +3,6 @@
 #include <assert.h> 
 #include <string.h>
 
-char * instruction(char ** table, int i, int j){
-  int k=5;
-  int len = strlen(table[i]);
-  char * cha=calloc(50,sizeof(char));
-  //save instr
-  while(j<len-1){
-    cha[j-k]=table[i][j];
-    j++;
-  }       
-  return cha;
-  free(cha);
-}
-
 int variable(char ** table, int i, int j){
   int k=j;
   int len = strlen(table[i]);  
@@ -32,38 +19,56 @@ int variable(char ** table, int i, int j){
 
 void call_1(char ** table, int i, int arg, FILE * file){
   int j=5;
+  int k=5;
+  int len = strlen(table[i]);
+  char * ch=calloc(50,sizeof(char));
+  //save instr
+  while(j<len-1){
+    ch[j-k]=table[i][j];
+    j++;
+  }        
   char tmp[10]="";
   sprintf(tmp,"%d",arg);
   char * cha=calloc(50,sizeof(char));
-  strcpy(cha,instruction(table,i,j));
+  strcpy(cha,ch);
   fputs(cha, file);
   fputc(' ',file);
   fputs(tmp,file);
   fputc('\n',file);
   free(cha);      
+  free(ch);   
 }
 
 void call_2(char ** table, int i, int arg_1, int arg_2, FILE * file){
   int j=5;
+  int k=5;
+  int len = strlen(table[i]);
+  char * ch=calloc(50,sizeof(char));
+  //save instr
+  while(j<len-1){
+    ch[j-k]=table[i][j];
+    j++;
+  }       
   char tmp_1[10]="";
   sprintf(tmp_1,"%d",arg_1);
   char tmp_2[10]="";
   sprintf(tmp_2,"%d",arg_2);
   char * cha=calloc(50,sizeof(char));
-  strcpy(cha,instruction(table,i,j));
+  strcpy(cha,ch);
   fputs(cha, file);
   fputc(' ',file);
   fputs(tmp_1,file);
   fputc(' ',file);
   fputs(tmp_2,file);
   fputc('\n',file);
-  free(cha);      
+  free(cha); 
+  free(ch);        
 }
 
 void display(char ** table, int nb_line, FILE *file){
-  int * arg=calloc(10,sizeof(int));
-  int nb=0;
-  int i =0;
+  int * arg = calloc(50,sizeof(int));
+  int nb = 1;
+  int i = 0;
   
   while(i<nb_line){
     //Si on rencontre un pushf, on l'enregistre dans la pile
@@ -78,21 +83,22 @@ void display(char ** table, int nb_line, FILE *file){
       nb++;
       i++; 
       /*========pushf * 2===============*/
-      if(!strncmp(table[i],"pushf ",5)){
-        j=5;
+      if(!strncmp(table[i],"pushf",5)){
+        j=6;
         //save numéro
         arg[nb]= variable(table,i,j);
         nb++;
         i++;
-        if(!strncmp(table[i],"call ",5)){
+        if(!strncmp(table[i],"call",4)){
           call_2(table,i,arg[nb-2],arg[nb-1], file);
-          memset (arg, 0,10);
-          nb=0;
+          nb--;
+          nb--;
         }
       }
     //========begin repeat===============*/
     else if(!strncmp(table[i-1], "repeat_:",7)){
       int cmp=arg[nb-1];
+      nb--;
       int end=0;
       int begin=i;
 
@@ -114,21 +120,18 @@ void display(char ** table, int nb_line, FILE *file){
                 end++;
                 if(!strncmp(table[i],"call ",5)){
                     call_2(table,i,arg[nb-2],arg[nb-1],file);
-                    memset (arg, 0,10);
-                    nb=0;
+                    nb--;
+                    nb--;
                 }
                 end++;
             }
             if(!strncmp(table[i],"call ",5)){
                 call_1(table,i,arg[nb-1], file);
-                memset (arg, 0,10);
-                nb=0;
+                nb--;
                 end++;
             }
         }
-        else{
-          i++;
-        }
+        i++;
         if(!strncmp(table[i], "jmp repeat_",11)){
           cmp--;
           i=begin;
@@ -149,8 +152,7 @@ void display(char ** table, int nb_line, FILE *file){
       /*========call normal===============*/
       else if(!strncmp(table[i],"call ",5)){
         call_1(table,i,arg[nb-1], file);
-        memset (arg, 0,10);
-        nb=0;
+        nb--;
       }
     }
     i++;
