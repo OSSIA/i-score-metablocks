@@ -13,14 +13,18 @@ if [  $# -eq 0 ] || [ "$EXT" != "metablocks" ]
       exit 1
 else
 
-
-
    ./modif.sh "$1"
+
 
    wait
 
    make
-   ./trad_ASM "$NAME.txt"
+   ./main "$NAME.txt"
+
+   wait
+   make clean
+   rm "$NAME.txt"
+   rm "$NAME.xml"
 
    wait
    if [ ! -e /dev/ttyACM0 ]
@@ -42,6 +46,4 @@ else
    	done < test.txt
    fi
 
-   wait
-   make clean
 fi
