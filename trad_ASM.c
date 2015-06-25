@@ -2,11 +2,12 @@
 #include <stdlib.h>
 #include <assert.h> 
 #include <string.h>
+#include <stdbool.h>
 
 int variable(char ** table, int i, int j){
   int k=j;
   int len = strlen(table[i]);  
-  char * ch_nb=calloc(20,sizeof(char)); 
+  char * ch_nb=calloc(10,sizeof(char)); 
   //save numéro   
   while(j<len){
     ch_nb[j-k]=table[i][j];
@@ -65,98 +66,149 @@ void call_2(char ** table, int i, int arg_1, int arg_2, FILE * file){
   free(ch);        
 }
 
-void display(char ** table, int nb_line, FILE *file){
-  int * arg = calloc(50,sizeof(int));
-  int nb = 1;
-  int i = 0;
-  
-  while(i<nb_line){
+void test_fun (char ** table, int * arg, int *nb, int i, int *test, int *item, int *push, FILE * file){
     //Si on rencontre un pushf, on l'enregistre dans la pile
-    if(!strncmp(table[i], "stops",4)){
-      fputs("stop\n",file);
+    if(!strcmp(table[i], "call robot_reset\n")){
+      fputs("robot_reset\n",file);  
     }
+
     /*========pushf===============*/
     if(!strncmp(table[i], "pushf ",5)){
       int j=5; 
       //save numéro   
-      arg[nb]= variable(table,i,j);
-      nb++;
-      i++; 
-      /*========pushf * 2===============*/
-      if(!strncmp(table[i],"pushf",5)){
-        j=6;
-        //save numéro
-        arg[nb]= variable(table,i,j);
-        nb++;
-        i++;
-        if(!strncmp(table[i],"call",4)){
-          call_2(table,i,arg[nb-2],arg[nb-1], file);
-          nb--;
-          nb--;
+      arg[*nb]= variable(table,i,j);
+      (*nb)++;
+      (*push)++;
+      
+    }
+    else if(push>0){
+      if(!strncmp(table[i],"call",4)){
+        if(!strcmp(table[i],"call robot_leg_leds\n")
+            ||!strcmp(table[i],"call robot_turn\n")
+            ||!strcmp(table[i],"call robot_move_x\n")
+            ||!strcmp(table[i],"call robot_move_y\n")){
+          call_2(table,i,arg[(*nb)-2],arg[(*nb)-1], file);
+          (*nb)--;
+          (*nb)--;
+          (*push)--;
+          (*push)--;
+        }
+        else if(!strncmp(table[i],"call",4)){
+          call_1(table,i,arg[(*nb)-1], file);
+          (*nb)--;
+          (*push)--; 
+        }
+      }//end call
+      else if (!strcmp(table[i],"add\n")){
+        int n=0;
+        for(int i =0; i < 10;i++){
+          if(arg[i]!=0){
+            n++;
+          }
+        }
+        if(n==2){
+          *item+=arg[(*nb)-2]+arg[(*nb)-1];
+          (*nb)--;
+          (*nb)--;
+          (*push)--;
+          (*push)--;       
+        }
+        else{
+          *item+=arg[(*nb)-1];
+          (*nb)--;
+          (*push)--;   
         }
       }
+    }//end if push
+  }
+void if_true(char ** table, int * arg, int *nb, int *i, int *test, int *item, int *push, FILE * file){
+  bool b = true;
+  while(b){    
+    test_fun(table, arg, &(*nb), (*i), &(*test), &(*item), &(*push), file);
+    if(!strncmp(table[*i],"else_",5)){
+      b=false;
+    }   
+    (*i)++; 
+  }
+  while(!b){        
+    if(!strncmp(table[*i],"if_end_",7)){
+      b=true;
+    }
+    (*i)++; //bon nombre item
+  }
+}
+void if_false(char ** table, int * arg, int *nb, int *i, int *test, int *item, int *push, FILE * file){
+  bool b = true;
+  while(b){  
+    (*i)++;    //bon nombre push
+    if(!strncmp(table[*i],"else_",5)){
+      b=false;
+    }  
+  }
+  while(!b){   
+    (*i)++;  //bon nombre item 
+    test_fun(table, arg, &(*nb), (*i), &(*test), &(*item), &(*push), file);
+    if(!strncmp(table[*i],"if_end_",7)){
+      b=true;
+    }  
+  }
+}
+
+
+void display(char ** table, int nb_line, FILE *file){
+  int * arg = calloc(1000,sizeof(int));
+  int nb = 50;
+  int i = 0;
+  int item=0;
+  int test=0;
+  int push=0;
+  while(i<nb_line){
+    if(!strncmp(table[i], "stops",4)){
+      fputs("stop\n",file);
+      break;
+    }
+    test_fun(table, arg, &nb, i, &test, &item, &push, file);
     //========begin repeat===============*/
-    else if(!strncmp(table[i-1], "repeat_:",7)){
-      int cmp=arg[nb-1];
+    if(!strncmp(table[i], "repeat_:",7)){
+      int cmp=arg[nb-1]-1;
       nb--;
       int end=0;
       int begin=i;
-
+      i++;
+      //bool b =true;
       while(cmp>0){     
-        if(!strncmp(table[i], "pushf ",5)){
-            int j=5; 
-            //save numéro   
-            arg[nb]= variable(table,i,j);
-            nb++;
-            i++; 
-            end++;
-            //Si on rencontre un deuxième pushf
-            if(!strncmp(table[i],"pushf ",5)){
-                j=5;
-                //save numéro
-                arg[nb]= variable(table,i,j);
-                nb++;
-                i++;
-                end++;
-                if(!strncmp(table[i],"call ",5)){
-                    call_2(table,i,arg[nb-2],arg[nb-1],file);
-                    nb--;
-                    nb--;
-                }
-                end++;
-            }
-            if(!strncmp(table[i],"call ",5)){
-                call_1(table,i,arg[nb-1], file);
-                nb--;
-                end++;
-            }
+        if(!strncmp(table[i], "stops",4)){
+          fputs("stop\n",file);
+          break;
         }
+        test_fun(table, arg, &nb, i, &test, &item, &push, file);
+        if(!strcmp(table[i],"teste\n")){
+          test=arg[nb-1];
+          nb--;
+          push--; 
+          if(test==item){
+            if_true(table, arg, &nb, &i, &test, &item, &push, file);
+          }
+          else{
+            if_false(table, arg, &nb, &i, &test, &item, &push, file);
+          }    
+        }//fin teste 
         i++;
         if(!strncmp(table[i], "jmp repeat_",11)){
           cmp--;
           i=begin;
-        }
-        
-      }
-      //end while 
+        }    
+      }//end while 
       if(!strcmp(table[i],"smash\n")){
         i=begin+end;
       }
-    }    
-    /*========end repeat===============*/
-
-      if(!strcmp(table[i], "call robot_reset\n")){
-        fputs("robot_reset\n",file);  
+      if(!strcmp(table[i],"kills\n")){
+        break;
       }
+    } //end repeat   
 
-      /*========call normal===============*/
-      else if(!strncmp(table[i],"call ",5)){
-        call_1(table,i,arg[nb-1], file);
-        nb--;
-      }
-    }
     i++;
-  }
+  }//end while fonction
   free(arg);
 }
 void verif_et_recup_arg(int nb, char *arg[], int nb_wanted, char *chaine);
