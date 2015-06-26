@@ -23,8 +23,7 @@ else
 
    wait
    make clean
-   rm "$NAME.txt"
-   rm "$NAME.xml"
+
 
    wait
    if [ ! -e /dev/ttyACM0 ]
