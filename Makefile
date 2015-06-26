@@ -18,4 +18,4 @@ function/trad_ASM.o: function/trad_ASM.c function/trad.h function/test_fun.h
 function/test_fun.o: function/test_fun.c function/test_fun.h 
 
 clean :
-	rm -f *.o $(OUTFILES)
+	rm -f function/*.o $(OUTFILES)
