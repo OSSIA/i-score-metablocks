@@ -1,5 +1,6 @@
-#!/bin/sh
-   FILE="$1"
+#!/bin/sh -x
+   f="$1"
+   FILE="${f##*/}"
    NAME="${FILE%%.*}"
    EXT="${FILE#*.}"
 
@@ -9,17 +10,17 @@ display_usage() {
 
 if [  $# -eq 0 ] || [ "$EXT" != "metablocks" ]
    then
-      display_usage
+      #display_usage
       exit 1
 else
 
-   ./modif.sh "$1"
+   script/./modif.sh "$1"
 
 
    wait
 
    make
-   ./main "$NAME.txt"
+   function/./main txt/"$NAME.txt"
 
    wait
    make clean

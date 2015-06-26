@@ -3,19 +3,19 @@ CC= gcc
 CFLAGS= -std=c99 -g -Wall -Werror
 
 
-OUTFILES= main
-OBJ= test_fun.o main.o trad_ASM.o 
+OUTFILES= function/main
+OBJ= function/test_fun.o function/main.o function/trad_ASM.o 
 
 all: $(OUTFILES)
 
-main: $(OBJ)
+function/main: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $@
 
-main.o: main.c trad.h
+function/main.o: function/main.c function/trad.h
 
-trad_ASM.o: trad_ASM.c trad.h test_fun.h
+function/trad_ASM.o: function/trad_ASM.c function/trad.h function/test_fun.h
 
-test_fun.o: test_fun.c test_fun.h 
+function/test_fun.o: function/test_fun.c function/test_fun.h 
 
 clean :
 	rm -f *.o $(OUTFILES)
