@@ -10,7 +10,7 @@ int variable(char ** table, int i, int j){
   int k=j;
   int len = strlen(table[i]);  
   char * ch_nb=calloc(10,sizeof(char)); 
-  //save numéro   
+  //save numero   
   while(j<len){
     ch_nb[j-k]=table[i][j];
     j++;
@@ -71,7 +71,7 @@ void test_fun (char ** table, int * arg, int *nb, int i, int *test, int *item, i
     /*========pushf===============*/
     if(!strncmp(table[i], "pushf ",5)){
       int j=5; 
-      //save numéro   
+      //save numero   
       arg[*nb]= variable(table,i,j);
       (*nb)++;
       (*push)++;

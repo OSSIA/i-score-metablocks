@@ -48,11 +48,11 @@ int main(int argc, char *argv[]){
   file = fopen("test.txt", "w");
   
   if (file != NULL){     
-    display(table, nb_line,file); // Écriture du caractère A
+    display(table, nb_line,file); // Ecriture du caractere A
     fclose(file);
     }
   
-  printf("\nTout s'est bien passé ===> copié dans test.txt \n\n");
+  printf("\nTout s'est bien passe ===> copie dans test.txt \n\n");
   /*==========================Fermeture du file=============================================*/
   
   if(fclose(file_2) == EOF) {
@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
     exit(1);
   }
   printf(".............. Fermeture du file %s\n", nom_file_2);
-  /*==========================Libération mémoire=============================================*/
+  /*==========================Liberation memoire=============================================*/
   for(int i=0; i<line; i++){
     free(table[i]);
   }

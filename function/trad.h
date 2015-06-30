@@ -7,8 +7,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-
 void display(char ** table, int nb_line, FILE *file);
-
 
 #endif
