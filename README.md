@@ -33,8 +33,8 @@ Si ce script échoue: dans le dossier /src mkdir rhock
 
 Enlever les -Wall du Makefile
 Si le Makefile ne trouve pas la bibliothèque libstdc++.a, il faut remplacer la ligne LDFLAGS par  
-	LDFLAGS = $(TARGET_LDFLAGS) $(TOOLCHAIN\_LDFLAGS) \\
-		-mcpu=cortex-m3 -mthumb \ -Xlinker \\
+	LDFLAGS = $(TARGET_LDFLAGS) $(TOOLCHAIN\_LDFLAGS) 
+		-mcpu=cortex-m3 -mthumb \ -Xlinker 
 		--gc-sections \ -Xassembler
 		--march=armv7-m \ 
 		-L./RobotsWar/BinutilsArm/arm-none-eabi/lib/armv6-m/ -lstdc++
